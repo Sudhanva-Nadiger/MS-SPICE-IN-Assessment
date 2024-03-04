@@ -1,0 +1,117 @@
+{
+  "id": "2e2d60d7-2d02-4642-94ce-c30d413106ea",
+  "version": "2.0",
+  "name": "test-1",
+  "url": "https://www.imf.org",
+  "tests": [{
+    "id": "bbb65692-30cf-47ec-8f98-08241400c068",
+    "name": "imf_download_latest_working_paper",
+    "commands": [{
+      "id": "a1ee5843-9bd9-4a70-9b31-b58730a493c9",
+      "comment": "",
+      "command": "open",
+      "target": "/en/Home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "978f7575-bb77-40f8-8e8a-674c031374e1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "116c3919-54a1-407a-9428-ec10ca71c871",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Research')]",
+      "targets": [
+        ["css=.dmopener > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Research')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/en/Research')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40b63cb4-a6d7-4b86-89d9-7b893ad1fd27",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) strong:nth-child(1)",
+      "targets": [
+        ["css=li:nth-child(2) strong:nth-child(1)", "css:finder"],
+        ["xpath=//div[2]/ul/li[2]/a/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Working Papers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4edd6d49-3d7b-4d7a-88b3-f871c8971066",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,300)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4039f663-0872-458a-9b35-7aafd223e2a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#downshift-2-toggle-button > .select__button-text",
+      "targets": [
+        ["css=#downshift-2-toggle-button > .select__button-text", "css:finder"],
+        ["xpath=//button[@id='downshift-2-toggle-button']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3f18ecb-ef3f-4bf6-9677-9bbfae5c706d",
+      "comment": "",
+      "command": "click",
+      "target": "id=downshift-2-item-1",
+      "targets": [
+        ["id=downshift-2-item-1", "id"],
+        ["css=#downshift-2-item-1", "css:finder"],
+        ["xpath=//li[@id='downshift-2-item-1']", "xpath:attributes"],
+        ["xpath=//ul[@id='downshift-2-menu']/li[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'Newest')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7b14e86-c171-47fd-85fa-69986d39b3fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.coveo-list-layout:nth-child(1) .CoveoResultFolding .CoveoResultLink",
+      "targets": [
+        ["linkText=Download PDF", "linkText"],
+        ["css=.coveo-list-layout:nth-child(1) .CoveoResultFolding .CoveoResultLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Download PDF')]", "xpath:link"],
+        ["xpath=//h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Download PDF')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bafc56d-9084-4225-aaf7-a46312ec71b5",
+      "comment": "",
+      "command": "pause",
+      "target": "15000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "299325bf-dc7b-44d2-b7e2-2c25a4aedc23",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7156530d-e059-4fad-8b6e-c836735efb56",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bbb65692-30cf-47ec-8f98-08241400c068"]
+  }],
+  "urls": ["https://www.imf.org/"],
+  "plugins": []
+}
